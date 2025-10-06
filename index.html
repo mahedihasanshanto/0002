@@ -16,94 +16,106 @@
 </head>
 
 <body>
-    
-  <!-- Navbar -->
-    <nav class="bg-[#EFEBE3] px-6 md:px-24 py-4 flex items-center justify-between">
-        <!-- Logo -->
-        <div class="flex items-center">
-            <img src="c2-assets/logo-header.png" alt="Logo" class="h-10 w-20 mr-2 md:mr-6">
-        </div>
-
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-4">
-            <a href="#" class="text-gray-700 font-medium hover:text-green-600">Product</a>
-            <a href="#" class="text-gray-700 font-medium hover:text-green-600">Service</a>
-            <a href="#" class="text-gray-700 font-medium hover:text-green-600">Contact Us</a>
-
-            <!-- Search Icon -->
-            <button class="text-gray-700 hover:text-green-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
-                </svg>
-            </button>
-
-            <!-- Shopping Cart Icon -->
-            <button class="text-gray-700 hover:text-green-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 8h14l-2-8M17 13V5" />
-                </svg>
-            </button>
-
-            <!-- Login/Register Buttons -->
-            <a href="#"
-                class="px-4 py-2 border border-green-600 text-gray-800 rounded hover:bg-green-600 hover:text-white">Login</a>
-            <a href="#"
-                class="px-4 py-2 border border-green-600 text-gray-800 rounded hover:bg-green-600 hover:text-white">Register</a>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-            <button id="mobile-menu-button" class="text-gray-700 hover:text-green-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden flex flex-col items-center space-y-4 py-4 bg-[#EFEBE3]">
-        <a href="#" class="text-gray-700 font-medium hover:text-green-600">Product</a>
-        <a href="#" class="text-gray-700 font-medium hover:text-green-600">Service</a>
-        <a href="#" class="text-gray-700 font-medium hover:text-green-600">Contact Us</a>
-        <div class="flex space-x-4">
-            <button class="text-gray-700 hover:text-green-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
-                </svg>
-            </button>
-            <button class="text-gray-700 hover:text-green-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 8h14l-2-8M17 13V5" />
-                </svg>
-            </button>
-        </div>
-        <div class="flex space-x-2">
-            <a href="#"
-                class="px-4 py-2 border border-green-600 text-gray-800 rounded hover:bg-green-600 hover:text-white">Login</a>
-            <a href="#"
-                class="px-4 py-2 border border-green-600 text-gray-800 rounded hover:bg-green-600 hover:text-white">Register</a>
-        </div>
+<!-- Fixed Responsive Navbar -->
+<nav class="bg-[#EFEBE3] fixed top-0 left-0 w-full z-50 shadow">
+  <div class="px-6 md:px-24 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="c2-assets/logo-header.png" alt="Logo" class="h-10 w-auto mr-2 md:mr-6">
     </div>
 
-    <!-- Hero Section -->
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center space-x-6">
+      <a href="#" class="text-gray-700 font-medium hover:text-green-600 transition">Product</a>
+      <a href="#" class="text-gray-700 font-medium hover:text-green-600 transition">Service</a>
+      <a href="#" class="text-gray-700 font-medium hover:text-green-600 transition">Contact Us</a>
+
+      <!-- Search Icon -->
+      <button class="text-gray-700 hover:text-green-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+        </svg>
+      </button>
+
+      <!-- Cart Icon -->
+      <button class="text-gray-700 hover:text-green-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 8h14l-2-8M17 13V5" />
+        </svg>
+      </button>
+
+      <!-- Login / Register -->
+      <a href="#"
+        class="px-4 py-2 border border-green-600 text-gray-800 rounded hover:bg-green-600 hover:text-white transition">Login</a>
+      <a href="#"
+        class="px-4 py-2 border border-green-600 text-gray-800 rounded hover:bg-green-600 hover:text-white transition">Register</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button id="mobile-menu-button" class="text-gray-700 hover:text-green-600 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ✅ Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center space-y-4 py-4 bg-[#EFEBE3] border-t border-gray-200">
+    <a href="#" class="text-gray-700 font-medium hover:text-green-600 transition">Product</a>
+    <a href="#" class="text-gray-700 font-medium hover:text-green-600 transition">Service</a>
+    <a href="#" class="text-gray-700 font-medium hover:text-green-600 transition">Contact Us</a>
+
+    <div class="flex space-x-4">
+      <!-- Search -->
+      <button class="text-gray-700 hover:text-green-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+        </svg>
+      </button>
+      <!-- Cart -->
+      <button class="text-gray-700 hover:text-green-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 8h14l-2-8M17 13V5" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="flex space-x-2">
+      <a href="#"
+        class="px-4 py-2 border border-green-600 text-gray-800 rounded hover:bg-green-600 hover:text-white transition">Login</a>
+      <a href="#"
+        class="px-4 py-2 border border-green-600 text-gray-800 rounded hover:bg-green-600 hover:text-white transition">Register</a>
+    </div>
+  </div>
+</nav>
+<!--Mobile Menu Toggle JS -->
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<!-- Hero Section -->
     <section class="bg-[#EFEBE3] flex flex-col items-center justify-center text-center py-8 px-4">
-        <div>
+        <div class="py-20">
             <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-snug">
                 Freshness <span class="text-green-700">You Can <br class="hidden md:block"> Count</span> On, Prices You’ll Love!
             </h1>
-            <p class="text-gray-700 text-lg md:text-xl max-w-2xl mx-auto">
-                Shop your daily essentials at unbeatable prices. 
-                From fresh produce to pantry staples, we’ve got you covered every day!
+            <p class="text-gray-700 text-lg md:text-xl max-w-2xl mx-auto ">
+               <span class="text-green-600"> Hi,</span>  I am Mahedi Hasan Shanto. I am a beginner in web development, but I am passionate and eager to learn. I enjoy exploring new technologies and creating simple projects to improve my skills. My goal is to become a <span class="text-red-700">professional</span> front-end developer in the future.
             </p>
         </div>
 
@@ -114,23 +126,22 @@
         </div>
     </section>
  
-<header class="px-24 py-4 flex items-center justify-between">
-<!-- Section One -->
-<section class="py-12 bg-white">
+<!--  Services Section -->
+<section class="bg-white py-12 px-4 md:px-12 lg:px-24">
     <!-- Section Title -->
-    <div class="mb-8">
-        <h2 class="text-green-600 font-bold text-3xl">Services</h2>
+    <div class="text-center mb-10">
+        <h2 class="text-green-600 font-bold text-3xl md:text-4xl">Services</h2>
     </div>
 
-    <!-- Card Section -->
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!--  Responsive Cards -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         
         <!-- Card 1 -->
         <div class="bg-[#EFEBE3] p-6 rounded-xl shadow hover:shadow-lg transition">
             <img src="c2-assets/service.png" alt="Service Image"
-                class="w-24 h-24 p-4 mx-auto mb-3 bg-white  rounded-full object-cover">
+                class="w-24 h-24 p-4 mx-auto mb-3 bg-white rounded-full object-cover">
             <h3 class="text-xl font-semibold text-center mb-2">24/7 Services</h3>
-            <p class="text-gray-600 text-center">
+            <p class="text-gray-600 text-center text-sm md:text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
             </p>
         </div>
@@ -138,9 +149,9 @@
         <!-- Card 2 -->
         <div class="bg-[#EFEBE3] p-6 rounded-xl shadow hover:shadow-lg transition">
             <img src="c2-assets/healthy.png" alt="Service Image"
-                class="w-24 h-24 p-4 mx-auto mb-4  bg-white  rounded-full object-cover">
+                class="w-24 h-24 p-4 mx-auto mb-4 bg-white rounded-full object-cover">
             <h3 class="text-xl font-semibold text-center mb-2">Fast Delivery</h3>
-            <p class="text-gray-600 text-center">
+            <p class="text-gray-600 text-center text-sm md:text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
             </p>
         </div>
@@ -150,13 +161,12 @@
             <img src="c2-assets/delivery.png" alt="Service Image"
                 class="w-24 h-24 p-4 mx-auto mb-4 bg-white rounded-full object-cover">
             <h3 class="text-xl font-semibold text-center mb-2">Quality Support</h3>
-            <p class="text-gray-600 text-center">
+            <p class="text-gray-600 text-center text-sm md:text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
             </p>
         </div>
     </div>
 </section>
- </header>
 <!-- header tow   -->
  <header class="bg-[#EFEBE3] py-12">
   <section class="max-w-7xl mx-auto px-6">
@@ -319,16 +329,99 @@
     </div>
   </section>
 </header>
+<!-- main section  -->
+<main>
+   <header class="py-12">
+  <section class="max-w-7xl mx-auto px-6">
+    <!-- Section Title -->
+    <div class="mb-8">
+      <h2 class="text-green-600 font-bold text-3xl">Popular Products</h2>
+    </div>
+
+    <!-- Cards Container -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Card One -->
+      <div class="bg-green-800 rounded-xl p-6 flex  md:flex-row items-center justify-between gap-6">
+        <!-- Left Side -->
+        <div class="text-center md:text-left flex flex-col items-center md:items-start space-y-3">
+          <img src="c2-assets/dawat-logo.png" alt="Dawat Logo" class="w-32 mb-2">
+          <button class="btn btn-success">Cook Exotic Dishes</button>
+          <h1 class="text-2xl font-bold text-white">Up to 20% OFF</h1>
+        </div>
+        <!-- Right Side -->
+        <div class="flex  md:justify-end">
+          <img src="c2-assets/dawat-mock-up.png" alt="Dawat Mockup" class="w-64 md:w-80">
+        </div>
+      </div>
+
+      <!-- Card Two -->
+      <div class="bg-[#102861] rounded-xl p-6 flex  md:flex-row items-center justify-between gap-6">
+        <!-- Left Side -->
+        <div class="text-center md:text-left flex flex-col items-center md:items-start space-y-3">
+          <img src="c2-assets/india-gate-logo.png" alt="Dawat Logo" class="w-30 mb-4">
+          <button class="bg-[#2A4D97] rounded-md p-3">Cook Exotic Dishes</button>
+          <h1 class="text-2xl font-bold text-white">Up to 20% OFF</h1>
+        </div>
+        <!-- Right Side -->
+        <div class="flex justify-center md:justify-end">
+          <img src="c2-assets/india-gate-mock-up.png" alt="Dawat Mockup" class="w-20 md:w-40">
+        </div>
+      </div>
+
+    </div>
+  </section>
+</header>
+</main>
 
 
+    <!-- Newsletter + Footer Section -->
+<footer class="bg-green-700 text-white mt-16">
+  <!-- Newsletter Box -->
+  <div class="max-w-5xl mx-auto -translate-y-20 bg-[#F7F5F2] rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+    <!-- Left Image -->
+    <div class="flex justify-center md:justify-start">
+      <img src="c2-assets/vegetable-busket.png" alt="Grocery Basket" class="w-40 md:w-56">
+    </div>
+    <!-- Right Content -->
+    <div class="text-center md:text-left flex-1">
+      <h3 class="text-2xl font-bold text-gray-800 mb-2">Get Grocery News!</h3>
+      <p class="text-gray-600 mb-4">Exclusive training tips, tricks, product deals and more.</p>
+      <div class="flex flex-col sm:flex-row items-center gap-3">
+        <input type="email" placeholder="Enter email..." class="w-full sm:w-auto flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none">
+        <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium transition">Subscribe</button>
+      </div>
+    </div>
+  </div>
 
-    
+  <!-- Footer Content -->
+  <div class="max-w-5xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Brand Info -->
+    <div>
+      <h4 class="text-2xl font-bold mb-2 flex items-center gap-2">
+        <img src="c2-assets/logo-footer.png" alt="Logo" class="w-20 h-10"></h4>
+      <p class="text-gray-100 text-sm">Discover a world of treats, toys, and essentials handpicked for your furry friends</p>
+    </div>
+
+    <!-- Links -->
+    <div class="flex flex-col space-y-2 text-sm">
+      <a href="#" class="hover:underline">Product</a>
+      <a href="#" class="hover:underline">Services</a>
+      <a href="#" class="hover:underline">Contact us</a>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="flex items-center gap-4 md:justify-end">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i><img src="c2-assets/icons8-facebook-circled-50.png" alt=""></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i><img src="c2-assets/icons8-instagram-50.png" alt=""></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i><img src="c2-assets/icons8-twitter-logo-50.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
-
-
-    <main></main>
-    <footer></footer>
+   
 
 
 
